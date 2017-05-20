@@ -197,9 +197,9 @@ public class TestDbConnection extends HibernateDriver {
         }
 	public static void main(String[] args) {
 		TestDbConnection testDbConnection = new TestDbConnection();
-//		testDbConnection.testConnection();
+		testDbConnection.testConnection();
 		try {
-			                 System.out.println(testDbConnection.getmaxID());
+//			                 System.out.println(testDbConnection.getmaxID());
 			
 //			List<Nurse> nurses = testDbConnection.getNurses();
 //			
@@ -212,11 +212,11 @@ public class TestDbConnection extends HibernateDriver {
 //			for (SelledDrug selledDrug : selledDrugs) {
 //				System.out.println(selledDrug.getPatient().getName());
 //			}
-//			testDbConnection.addRoomType();
-//			testDbConnection.addBloodGroup();
-//			testDbConnection.addCategory();
-//			testDbConnection.addShiftTime();
-//			testDbConnection.addAdmin();
+			testDbConnection.addRoomType();
+			testDbConnection.addBloodGroup();
+			testDbConnection.addCategory();
+			testDbConnection.addShiftTime();
+			testDbConnection.addAdmin();
 
 			// testDbConnection.addPatient();
 

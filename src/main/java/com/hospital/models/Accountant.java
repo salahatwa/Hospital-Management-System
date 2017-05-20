@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Employee")
+@Table(name = "Employee"  )
 @DiscriminatorValue("Accountant")
 public class Accountant extends Employee implements Serializable {
 
