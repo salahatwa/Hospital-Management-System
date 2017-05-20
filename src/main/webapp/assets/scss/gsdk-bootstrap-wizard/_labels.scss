@@ -1,0 +1,68 @@
+/*           Labels & Progress-bar              */
+.label{
+    padding: 0.2em 0.6em 0.2em;
+    border: 1px solid $gray-color;
+    border-radius: 3px;
+    color: $gray-color;
+    background-color: $white-color;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    &.label-fill{
+        color: $white-color;
+    }
+}
+.label-primary{
+    border-color: $primary-color;
+    color: $primary-color;
+}
+.label-info{
+    border-color: $info-color;
+    color: $info-color;
+}
+.label-success{
+    border-color: $success-color;
+    color: $success-color;
+}
+.label-warning{
+    border-color: $warning-color;
+    color: $warning-color;
+}
+.label-danger{
+    border-color: $danger-color;
+    color: $danger-color;
+}
+
+label{
+    font-weight: 400;
+}
+
+label.error{
+    color: $danger-color;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+label small{
+    color: $gray-color;
+}
+
+.label-primary.label-fill, .progress-bar, .progress-bar-primary{
+   background-color: $primary-color;
+}
+.label-info.label-fill, .progress-bar-info{
+    background-color: $info-color;
+}
+.label-success.label-fill, .progress-bar-success{
+   background-color: $success-color;
+}
+.label-warning.label-fill, .progress-bar-warning{
+   background-color: $warning-color;
+}
+.label-danger.label-fill, .progress-bar-danger{
+   background-color: $danger-color;
+}
+.label-default.label-fill{
+   background-color: $gray-bg;
+}

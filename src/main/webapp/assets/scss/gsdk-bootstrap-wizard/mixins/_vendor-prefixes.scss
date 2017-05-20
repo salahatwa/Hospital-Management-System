@@ -1,0 +1,20 @@
+@mixin set-wizard-color($color) {
+    .choice{
+        &:hover,
+        &.active{
+            .icon{
+                border-color: $color;
+            }
+        }
+    }
+
+    .picture{
+        &:hover{
+            border-color: $color;
+        }
+    }
+
+    .moving-tab{
+        background-color: $color;
+    }
+}

@@ -1,0 +1,49 @@
+/*            Navigation menu                */
+.nav-pills{
+    background-color: $gray-bg;
+
+    > li + li {
+        margin-left: 0;
+    }
+
+    > li > a {
+       border: 1px solid #2CA8FF;
+       border-radius: 0;
+       color: #2CA8FF;
+       border: 0 !important;
+       text-transform: uppercase;
+       background-color: #999999;
+       text-align: center;
+       color: #FFFFFF !important;
+       font-size: 12px;
+       cursor: pointer;
+
+       &:focus,
+       &:hover{
+           background-color: $gray-bg;
+       }
+    }
+
+    > li.active > a,
+    > li.active > a:focus,
+    > li.active > a:hover{
+        background-color: inherit;
+    }
+
+}
+
+.text-primary, .text-primary:hover{
+    color: $primary-color;
+}
+.text-info, .text-info:hover{
+    color: $info-color;
+}
+.text-success, .text-success:hover{
+    color: $success-color;
+}
+.text-warning, .text-warning:hover{
+    color: $warning-color;
+}
+.text-danger, .text-danger:hover{
+    color: $danger-color;
+}

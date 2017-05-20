@@ -1,0 +1,105 @@
+/*             Inputs               */
+.form-control {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #444444;
+    height: 38px;
+    padding: 6px 16px;
+
+    &:focus{
+        background-color: #FFFFFF;
+        border: 1px solid #9A9A9A;
+        box-shadow: none;
+        outline: 0 none;
+    }
+
+    + .form-control-feedback{
+        border-radius: 6px;
+        font-size: 14px;
+        padding: 0 12px 0 0;
+        position: absolute;
+        right: 25px;
+        top: 13px;
+        vertical-align: middle;
+    }
+
+    .has-success &,
+    .has-error &,
+    .has-success &:focus,
+    .has-error &:focus{
+        border-color: #E3E3E3;
+        box-shadow: none;
+    }
+
+    .has-success &,
+    .has-success .form-control-feedback,
+    &.valid:focus{
+        border-color: #05AE0E;
+        color: #05AE0E;
+    }
+
+    .has-error &,
+    .has-error .form-control-feedback,
+    &.error{
+        color: #FF3B30;
+        border-color: #FF3B30;
+    }
+
+    &:focus + .input-group-addon,
+    &:focus ~ .input-group-addon{
+        background-color: #FFFFFF;
+        border-color: #9A9A9A;
+    }
+
+    ::-moz-placeholder{
+       color: #DDDDDD;
+       opacity: 1;
+    }
+
+    ::-moz-placeholder{
+       color: #DDDDDD;
+       opacity: 1;
+    }
+
+    ::-webkit-input-placeholder{
+       color: #DDDDDD;
+       opacity: 1;
+    }
+
+    ::-ms-input-placeholder{
+       color: #DDDDDD;
+       opacity: 1;
+    }
+
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] &{
+        background-color: #EEEEEE;
+        color: #999999;
+        cursor: not-allowed;
+    }
+
+}
+
+.input-lg{
+    height: 56px;
+    padding: 10px 16px;
+}
+
+.input-group-addon {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+
+
+}
+
+
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-right: 0 none;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child) {
+    border-left: 0 none;
+}
