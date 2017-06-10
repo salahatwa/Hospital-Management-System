@@ -2,7 +2,7 @@
 
 Free Java project for Management Hospital Using J2EE and Hibernate With Prefect Design Pattern Methodology
 
-# Sozer J2EE ![bower](https://img.shields.io/bower/v/ng-image-gallery.svg?style=flat-square) [![npm downloads](https://img.shields.io/npm/dt/ng-image-gallery.svg?style=flat-square)](https://www.npmjs.com/package/ng-image-gallery) [![preview](https://img.shields.io/badge/preview-click_here-green.svg?style=flat-square)](https://rawgit.com/thatisuday/ng-image-gallery/master/demo/main.html)
+# Sozer J2EE ![Bower](https://img.shields.io/bower/v/ng-image-gallery.svg?style=flat-square) [![Downloads](https://img.shields.io/npm/dt/ng-image-gallery.svg?style=flat-square)]() [![Maven](https://img.shields.io/badge/preview-click_here-green.svg?style=flat-square)]()
 
 # Used Technologies
 1. Java Web Application building using ( JSP - Servlet )
@@ -42,57 +42,27 @@ Tomcat or Jboss
 
 ### Pharmacy Page
 ![pharmacy](https://user-images.githubusercontent.com/11550708/27002550-ad0ec4c8-4d99-11e7-95ac-fa8e9008a335.PNG)
+![selldrug](https://user-images.githubusercontent.com/11550708/27002554-ad317e1e-4d99-11e7-8776-d4f55758286e.PNG)
 
 ### Patient Management Page
 ![bookbed](https://user-images.githubusercontent.com/11550708/27002544-acb60e64-4d99-11e7-8e3f-ffdd88afd3de.PNG)
+![patient](https://user-images.githubusercontent.com/11550708/27002548-acf6d480-4d99-11e7-812d-1d82413682c8.PNG)
 
+### Password Page
 ![changepassword](https://user-images.githubusercontent.com/11550708/27002551-ad11112e-4d99-11e7-9f34-33a6c061ad3e.PNG)
 
-![patient](https://user-images.githubusercontent.com/11550708/27002548-acf6d480-4d99-11e7-812d-1d82413682c8.PNG)
-![selldrug](https://user-images.githubusercontent.com/11550708/27002554-ad317e1e-4d99-11e7-8776-d4f55758286e.PNG)
-
-
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-
-```
-Give an example
-```
 
 ## Deployment
-
-Add additional notes about how to deploy this on a live system
+Clean and build your project , put war file in web app folder if you are using tomcat or standlon folder if you are using Jboss ,
+Then click on start.bat if you using windows or start.sh if using linux.
 
 ## Built With
-
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-
 ## Authors
-
 * **Salah Atwa** - *Initial work* - [GitHub](https://github.com/salahatwa)
 * **Salah Atwa** - *Initial work* - [LinkedIn](https://www.linkedin.com/in/salah-atwa/)
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
