@@ -57,7 +57,7 @@
 					<div class="wizard-navigation">
 						<ul>
 							<li><a href="#about" data-toggle="tab">About</a></li>
-							<li><a href="#skin" data-toggle="tab">Next Of Skin</a></li>
+							<li><a href="#skin" data-toggle="tab">Next Of kin</a></li>
 						</ul>
 
 					</div>
@@ -165,18 +165,11 @@
 
 
 
-								<div class="col-sm-2 col-sm-offset-1">
-									<div class="form-group">
-										<label>Age <small>(required)</small></label> <input
-											type="number" class="form-control" name="age"
-											placeholder="Age" required />
-									</div>
-								</div>
-
+							
 							</div>
 						</div>
 						<div class="tab-pane" id="skin">
-							<h4 class="info-text">Next Of Skin</h4>
+							<h4 class="info-text">Next Of kin</h4>
 							<div class="row">
 
 								<div class="col-sm-3 col-sm-offset-1">

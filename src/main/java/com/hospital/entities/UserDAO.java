@@ -14,6 +14,11 @@ public interface UserDAO {
 
 	public List<Message> getAllMessagesForEmployee(Integer employeeID);
 	
+	public List<Message> getAllUnreadMessagesForEmployee(Integer employeeID);
+	
 	public List<Employee> getEmployees(String type) ;
+	
+	public <T extends Object> Object getObject(int employeeID, Class<T> clazz);
+
 
 }

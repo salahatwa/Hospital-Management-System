@@ -10,7 +10,7 @@ public class FormateDate {
 	public static Date getFormatedDate(String dateText) {
 		Date date = null;
 		try {
-			SimpleDateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+			SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 			date = df.parse(dateText);
 		} catch (Exception ex) {
 			ex.printStackTrace();

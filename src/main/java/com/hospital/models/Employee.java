@@ -75,13 +75,15 @@ public class Employee implements java.io.Serializable {
 
 	@OneToMany(fetch = FetchType.EAGER , targetEntity = WorkExperince.class, cascade = { CascadeType.ALL  })
 	@JoinColumn(name = "employee_id")
-	private List<WorkExperince> workExperinces=new ArrayList<>();
+	private List<WorkExperince> workExperinces;
 
 	@OneToMany(fetch = FetchType.EAGER, targetEntity = Qualification.class, cascade = { CascadeType.ALL })
 	@JoinColumn(name = "employee_id")
-	private List<Qualification> qualifications=new ArrayList<>();
+	private List<Qualification> qualifications;
 
 	public Employee() {
+		workExperinces=new ArrayList<>();
+		qualifications=new ArrayList<>();
 	}
 
 	public Integer getEmployeeId() {

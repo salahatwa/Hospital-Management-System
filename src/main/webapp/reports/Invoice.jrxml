@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-05-10T20:30:38 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
@@ -110,16 +111,13 @@
 	<field name="class" class="java.lang.Class">
 		<fieldDescription><![CDATA[class]]></fieldDescription>
 	</field>
-	<field name="age" class="java.lang.Integer">
-		<fieldDescription><![CDATA[age]]></fieldDescription>
-	</field>
 	<field name="email" class="java.lang.String">
 		<fieldDescription><![CDATA[email]]></fieldDescription>
 	</field>
-	<field name="startDate" class="java.lang.String">
+	<field name="startDate" class="java.util.Date">
 		<fieldDescription><![CDATA[startDate]]></fieldDescription>
 	</field>
-	<field name="drug_expired" class="java.lang.String">
+	<field name="drug_expired" class="java.util.Date">
 		<fieldDescription><![CDATA[drug_expired]]></fieldDescription>
 	</field>
 	<field name="bloodGroupName" class="java.lang.String"/>
@@ -186,10 +184,6 @@
 				<reportElement x="465" y="10" width="84" height="20" uuid="bb10dbe1-0a4f-4722-9953-c163b63cf979"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
-			<image hAlign="Center">
-				<reportElement x="0" y="0" width="65" height="60" uuid="94883631-a913-43e2-b182-ab8d77d0181e"/>
-				<imageExpression><![CDATA[$P{IMAGE_PATH}]]></imageExpression>
-			</image>
 			<textField pattern="EEEEE dd MMMMM yyyy">
 				<reportElement x="465" y="30" width="84" height="20" uuid="3836ce65-eca3-4cad-a6de-b1818def0a2b"/>
 				<textElement>
@@ -198,31 +192,31 @@
 				<textFieldExpression><![CDATA["INV000"+$F{patientID}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="95" y="0" width="210" height="25" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+				<reportElement x="5" y="0" width="210" height="25" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Serif" size="19" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Hopital System]]></text>
+				<text><![CDATA[Hospital System]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="95" y="55" width="45" height="15" uuid="b8cc42fd-b569-497d-834d-7e854040ad18"/>
+				<reportElement x="5" y="55" width="45" height="15" uuid="b8cc42fd-b569-497d-834d-7e854040ad18"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
 				<text><![CDATA[Phone number, web address, ecc.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="95" y="25" width="45" height="15" uuid="c226e44d-3bb5-4145-b0b3-903bf1d79fde"/>
+				<reportElement x="5" y="25" width="45" height="15" uuid="c226e44d-3bb5-4145-b0b3-903bf1d79fde"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
 				<text><![CDATA[Address]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="95" y="40" width="45" height="15" uuid="b96f7183-44f8-43ad-ba60-43d8fbf50b6e"/>
+				<reportElement x="5" y="40" width="45" height="15" uuid="b96f7183-44f8-43ad-ba60-43d8fbf50b6e"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
@@ -243,21 +237,21 @@
 				<textFieldExpression><![CDATA[$F{bloodGroupName}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="149" y="27" width="131" height="13" uuid="045e2bb1-2674-465f-a1c8-a9a1f754d34f"/>
+				<reportElement x="59" y="27" width="131" height="13" uuid="045e2bb1-2674-465f-a1c8-a9a1f754d34f"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="149" y="40" width="111" height="15" uuid="241cbe69-c24b-4076-a1cb-9d2607b62213"/>
+				<reportElement x="59" y="40" width="111" height="15" uuid="241cbe69-c24b-4076-a1cb-9d2607b62213"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="149" y="55" width="121" height="15" uuid="3431eae8-2ae5-4446-a935-dfca0046cd75"/>
+				<reportElement x="59" y="55" width="121" height="15" uuid="3431eae8-2ae5-4446-a935-dfca0046cd75"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
@@ -314,14 +308,14 @@
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
-				<text><![CDATA[startDate]]></text>
+				<text><![CDATA[Take Date]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="361" y="0" width="82" height="20" uuid="4c7a933b-b92f-42a4-83a1-4f278eec239a"/>
 				<textElement>
 					<font fontName="SansSerif"/>
 				</textElement>
-				<text><![CDATA[drug_expired]]></text>
+				<text><![CDATA[End Take Date]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="451" y="0" width="60" height="20" uuid="94e2c71a-d231-488d-b1c3-bc9f7938797b"/>

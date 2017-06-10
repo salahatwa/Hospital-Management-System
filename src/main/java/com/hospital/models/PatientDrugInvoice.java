@@ -21,15 +21,15 @@ public class PatientDrugInvoice {
 	
 	private Integer drugId;
 	private double cost;
-	private String drug_expired;
+	
 	private String drugName;
 	private int quantity;
-	private String startDate;
 	private String unitPerDay;
 	
+	private Date startDate;
+	private Date drug_expired;
+	
 	private double totalCost;
-
-
 	private String employeeName;
 
 	public PatientDrugInvoice() {
@@ -44,11 +44,11 @@ public class PatientDrugInvoice {
 		this.cost = cost;
 	}
 
-	public String getDrug_expired() {
+	public Date getDrug_expired() {
 		return this.drug_expired;
 	}
 
-	public void setDrug_expired(String drug_expired) {
+	public void setDrug_expired(Date drug_expired) {
 		this.drug_expired = drug_expired;
 	}
 
@@ -60,11 +60,11 @@ public class PatientDrugInvoice {
 		this.quantity = quantity;
 	}
 
-	public String getStartDate() {
+	public Date getStartDate() {
 		return this.startDate;
 	}
 
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 

@@ -61,6 +61,33 @@
 	function error() {
 		demo.showNotification('top', 'right', 'Error Operations', 'danger');
 	}
+	
+	function validatePassword() {
+		
+		var minNumberofChars = 6;
+		var maxNumberofChars = 16;
+		    
+		var pass1 = document.getElementById("password").value;
+		var pass2 = document.getElementById("confirm_password").value;
+		var regularExpression  =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/
+		if (pass1 != pass2)
+			{
+			 demo.showNotification('top','right','Password not matched ','danger');
+		  }
+		
+		  if(!regularExpression.test(pass1))
+		    {
+			 demo.showNotification('top','right','Password Must have at least one (upper case)-(lower case) letter and numbers','danger');
+			}
+		  
+		if(pass1.length < minNumberofChars || pass1.length > maxNumberofChars)
+		{
+			 demo.showNotification('top','right','Password Must be at least 6 character ,can not exceed more than 16','danger');}
+		}
+      
+		
+		
+	 document.getElementById('errorPass').click();
 </script>
 
 </head>

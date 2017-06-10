@@ -24,6 +24,8 @@ public class Disease implements java.io.Serializable {
 	private Integer diseaseId;
 
 	private String disease;
+	
+	private String note;
 
 	@OneToOne(fetch = FetchType.EAGER, targetEntity = Employee.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "employee_id")
@@ -76,6 +78,14 @@ public class Disease implements java.io.Serializable {
 
 	public void setDiseaseDate(Date diseaseDate) {
 		this.diseaseDate = diseaseDate;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
 	}
 
 }

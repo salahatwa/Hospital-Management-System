@@ -1,53 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
-
 <hibernate-configuration>
-	<session-factory>
-		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:xe</property>
-		<property name="hibernate.connection.username">Hospital__Management</property>
-		<property name="hibernate.connection.password">7718297</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
-                
-		<property name="hibernate.show_sql">false</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
-		<property name="hibernate.cache.use_query_cache">false</property>
-		<property name="hibernate.cache.use_second_level_cache">false</property>
-		<property name="hibernate.connection.release_mode">after_transaction</property>
-		<property name="hibernate.connection.autocommit">true</property>
-		<property name="hibernate.connection.pool_size">5</property>
-		<property name="hibernate.current_session_context_class">thread</property>
-
-		<mapping class="com.hospital.models.Category" />
-
-		<mapping class="com.hospital.models.Doctor" />
-		<mapping class="com.hospital.models.Xray" />
-		<mapping class="com.hospital.models.Receptioniest" />
-		<mapping class="com.hospital.models.Lab" />
-		<mapping class="com.hospital.models.Accountant" />
-		<mapping class="com.hospital.models.Pharmatiest" />
-		<mapping class="com.hospital.models.Nurse" />
-
-		<mapping class="com.hospital.models.ShiftTime" />
-		<mapping class="com.hospital.models.NurseServiceTime" />
-
-		<mapping class="com.hospital.models.Employee" />
-		<mapping class="com.hospital.models.BloodGroup" />
-
-		<mapping class="com.hospital.models.Drug" />
-		<mapping class="com.hospital.models.SelledDrug" />
-
-		<mapping class="com.hospital.models.Patient" />
-		<mapping class="com.hospital.models.NextOfKin" />
-		<mapping class="com.hospital.models.Room" />
-		<mapping class="com.hospital.models.RoomType" />
-		<mapping class="com.hospital.models.Qualification" />
-		<mapping class="com.hospital.models.WorkExperince" />
-		<mapping class="com.hospital.models.Message" />
-		<mapping class="com.hospital.models.BookBed" />
-		<mapping class="com.hospital.models.Disease" />
-
-
-
-	</session-factory>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:xe</property>
+    <property name="hibernate.connection.username">Hospital__Management</property>
+    <property name="hibernate.connection.password">7718297</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    <!--  <property name="hibernate.default_schema">hospital</property> -->
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.cache.use_query_cache">false</property>
+    <property name="hibernate.cache.use_second_level_cache">false</property>
+    <property name="hibernate.connection.release_mode">after_transaction</property>
+    <property name="hibernate.connection.autocommit">true</property>
+    <property name="hibernate.connection.pool_size">5</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <mapping class="com.hospital.models.Category"/>
+    <mapping class="com.hospital.models.Doctor"/>
+    <mapping class="com.hospital.models.Xray"/>
+    <mapping class="com.hospital.models.Receptioniest"/>
+    <mapping class="com.hospital.models.Lab"/>
+    <mapping class="com.hospital.models.Accountant"/>
+    <mapping class="com.hospital.models.Pharmatiest"/>
+    <mapping class="com.hospital.models.Nurse"/>
+    <mapping class="com.hospital.models.ShiftTime"/>
+    <mapping class="com.hospital.models.NurseServiceTime"/>
+    <mapping class="com.hospital.models.Employee"/>
+    <mapping class="com.hospital.models.BloodGroup"/>
+    <mapping class="com.hospital.models.Drug"/>
+    <mapping class="com.hospital.models.SelledDrug"/>
+    <mapping class="com.hospital.models.Patient"/>
+    <mapping class="com.hospital.models.NextOfKin"/>
+    <mapping class="com.hospital.models.Room"/>
+    <mapping class="com.hospital.models.RoomType"/>
+    <mapping class="com.hospital.models.Qualification"/>
+    <mapping class="com.hospital.models.WorkExperince"/>
+    <mapping class="com.hospital.models.Message"/>
+    <mapping class="com.hospital.models.BookBed"/>
+    <mapping class="com.hospital.models.Disease"/>
+  </session-factory>
 </hibernate-configuration>

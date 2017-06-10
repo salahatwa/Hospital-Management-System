@@ -17,38 +17,36 @@ import javax.persistence.Temporal;
 @Entity
 @Table(name = "SelledDrugs")
 public class SelledDrug {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "selledDrugID")
 	private int selledDrugID;
-        
-        
-        @Temporal(javax.persistence.TemporalType.DATE)
-        private Date startDate;
+
+	@Temporal(javax.persistence.TemporalType.DATE)
+	private Date startDate;
+
+	@Temporal(javax.persistence.TemporalType.DATE)
+	private Date endDate;
 	
-        @Temporal(javax.persistence.TemporalType.DATE)
-        private Date endDate;
-        
-	@OneToOne(fetch = FetchType.EAGER,targetEntity = Drug.class, cascade = {CascadeType.ALL})
+	private String unitPerDay;
+
+	@OneToOne(fetch = FetchType.EAGER, targetEntity = Drug.class, cascade = { CascadeType.ALL })
 	@JoinColumn(name = "Drug_ID")
 	private Drug drug;
-	
-	@OneToOne(fetch = FetchType.EAGER,targetEntity = Pharmatiest.class, cascade = {CascadeType.ALL})
+
+	@OneToOne(fetch = FetchType.EAGER, targetEntity = Pharmatiest.class, cascade = { CascadeType.ALL })
 	@JoinColumn(name = "pharmatiest_ID")
 	private Pharmatiest pharmatiest;
-	
-	@OneToOne(fetch = FetchType.EAGER,targetEntity = Patient.class, cascade = {CascadeType.ALL})
+
+	@OneToOne(fetch = FetchType.EAGER, targetEntity = Patient.class, cascade = { CascadeType.ALL })
 	@JoinColumn(name = "patient_ID")
 	private Patient patient;
-	
-	private int quantity;
-	
-        @Temporal(javax.persistence.TemporalType.DATE)
-	private Date selledDate;
 
-	
-	
+	private int quantity;
+
+	@Temporal(javax.persistence.TemporalType.DATE)
+	private Date selledDate;
 
 	public Patient getPatient() {
 		return patient;
@@ -98,32 +96,42 @@ public class SelledDrug {
 		this.selledDate = selledDate;
 	}
 
-    /**
-     * @return the startDate
-     */
-    public Date getStartDate() {
-        return startDate;
-    }
+	/**
+	 * @return the startDate
+	 */
+	public Date getStartDate() {
+		return startDate;
+	}
 
-    /**
-     * @param startDate the startDate to set
-     */
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
+	/**
+	 * @param startDate
+	 *            the startDate to set
+	 */
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
 
-    /**
-     * @return the endDate
-     */
-    public Date getEndDate() {
-        return endDate;
-    }
+	/**
+	 * @return the endDate
+	 */
+	public Date getEndDate() {
+		return endDate;
+	}
 
-    /**
-     * @param endDate the endDate to set
-     */
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
+	/**
+	 * @param endDate
+	 *            the endDate to set
+	 */
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public String getUnitPerDay() {
+		return unitPerDay;
+	}
+
+	public void setUnitPerDay(String unitPerDay) {
+		this.unitPerDay = unitPerDay;
+	}
 
 }

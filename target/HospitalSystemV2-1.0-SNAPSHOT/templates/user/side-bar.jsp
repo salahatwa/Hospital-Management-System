@@ -1,8 +1,16 @@
+<%@page import="com.hospital.models.Message"%>
+<%@page import="java.util.List"%>
+<%@page import="com.hospital.entities.HospitalService"%>
+<%@page import="com.hospital.entities.UserDAO"%>
 <%@page import="com.hospital.models.Employee"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
+	UserDAO userDAO = HospitalService.getInstance();
+
 	Employee emp2 = (Employee) session.getAttribute("employee");
+
+	List<Message> messages = userDAO.getAllUnreadMessagesForEmployee(emp2.getEmployeeId());
 %>
 
 <div class="sidebar" data-color="red"
@@ -15,7 +23,7 @@
 
 	<div class="logo">
 		<a href="employeeProfile.jsp" class="simple-text"> <%=emp2.getFirstName()%>
-			<%=emp2.getFatherName()%>
+			<%=emp2.getFamilyName()%>
 		</a>
 
 
@@ -47,7 +55,7 @@
 					<p>Nurse Service Time</p>
 			</a></li>
 			<%
-				} else if (emp2.getType().equals("Receptioniest")) {
+				} else if (emp2.getType().equals("Receptionist")) {
 			%>
 			<li><a href="patientmgmt.jsp"> <i class="material-icons">person</i>
 					<p>Manage Patient</p>
@@ -63,7 +71,7 @@
 					<p>Disease Patient</p>
 			</a></li>
 			<%
-				} else if (emp2.getType().equals("Pharmatiest")) {
+				} else if (emp2.getType().equals("pharmacist")) {
 			%>
 			<li><a href="drugmgmt.jsp"> <i class="material-icons">person</i>
 					<p>Manage Drug</p>
@@ -78,7 +86,7 @@
 			<li><a href="viewpatient.jsp"> <i class="material-icons">person</i>
 					<p>View Patient</p>
 			</a></li>
-			
+
 			<li><a href="viewservice.jsp"> <i class="material-icons">person</i>
 					<p>View Service Time</p>
 			</a></li>
@@ -110,7 +118,12 @@
 
 
 			<li><a href="inbox.jsp"> <i class="material-icons">library_books</i>
-					<p>Inbox</p>
+
+					<p>
+						Inbox <span class="notification"><%= messages.size() %></span>
+					</p>
+
+
 			</a>
 			<li><a href="sentMail.jsp"> <i
 					class="material-icons text-gray">notifications</i>

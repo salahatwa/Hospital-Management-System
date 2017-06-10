@@ -25,7 +25,7 @@ public class Patient implements java.io.Serializable {
 	private Integer patientId;
 	
 	private String address;
-	private int age;
+	
 	
 	@Temporal(TemporalType.DATE)
 	private Date dob;
@@ -52,10 +52,6 @@ public class Patient implements java.io.Serializable {
 	public Patient() {
 	}
 
-	public Patient(int age, long phone) {
-		this.age = age;
-		this.phone = phone;
-	}
 
 
 
@@ -92,13 +88,7 @@ public class Patient implements java.io.Serializable {
 		this.address = address;
 	}
 
-	public int getAge() {
-		return this.age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
+	
 
 	public Date getDob() {
 		return this.dob;

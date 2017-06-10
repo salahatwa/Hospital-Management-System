@@ -3,7 +3,7 @@ package com.hospital.utils;
 public enum ActionType {
 	
 	AddEmployee,deleteEmployee,UpdateEmployee,
-	ChangePassword,ComposeEmail,
+	ChangePassword,ComposeEmail,ViewMessage,
 	AddRoom,DeleteRoom,UpdateRoom,
 	AddPatient,DeletePatient,UpdatePatient,
 	BookBed,DeleteBookBed,UpdateBookBed,

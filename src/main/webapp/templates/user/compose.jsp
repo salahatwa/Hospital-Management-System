@@ -14,11 +14,11 @@
 	</div>
 </a>
 <%
-	UserDAO userDAO = HospitalService.getInstance();
-        Employee currentEmployee=(Employee)session.getAttribute("employee");
-	List<Employee> employees = userDAO.getListEmployeeWithout(currentEmployee.getEmployeeId());
+	UserDAO userDAO3 = HospitalService.getInstance();
+    Employee currentEmployee=(Employee)session.getAttribute("employee");
+	List<Employee> employees = userDAO3.getListEmployeeWithout(currentEmployee.getEmployeeId());
 	
-	List<Patient> patients=userDAO.getListObjects(Patient.class);
+	List<Patient> patients=userDAO3.getListObjects(Patient.class);
 %>
 
 <div class="content">

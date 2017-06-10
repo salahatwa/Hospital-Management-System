@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Employee")
-@DiscriminatorValue("Pharmatiest")
+@DiscriminatorValue("pharmacist")
 public class Pharmatiest extends Employee implements Serializable {
 
 	public Pharmatiest() {

@@ -156,7 +156,8 @@ public class Process extends HttpServlet {
 				response.sendRedirect("changePassword.jsp?Error=true");
 		} else if (action.equals(ActionType.ComposeEmail.name())) {
 			userListener.composeEmail(request, response);
-
+		}else if (action.equals(ActionType.ViewMessage.name())) {
+			userListener.viewMessage(request, response);
 		}
 
 	}

@@ -129,7 +129,6 @@
 							<li><a href="#qual" data-toggle="tab">Qualification</a></li>
 							<li><a href="#exp" data-toggle="tab">Work Experience</a></li>
 						</ul>
-
 					</div>
 
 					<div class="tab-content">
@@ -170,7 +169,7 @@
 								</div>
 
 
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-sm-offset-1">
 									<div class="form-group">
 										<label>Address<small>(required)</small></label> <input
 											name="address" type="text" class="form-control" required
@@ -180,7 +179,23 @@
 
 
 
-
+								<div class="col-sm-3 ">
+									<div class="form-group">
+										<label>Password <small>(required)</small></label> <input
+										id="password"	name="pass" type="password" class="form-control" required
+											placeholder="Employee Password...">
+									</div>
+								</div>
+								
+								<div class="col-sm-3 ">
+									<div class="form-group">
+										<label>Confirm Password <small>(required)</small></label> <input
+										id="confirm_password"	 type="password" class="form-control" required
+											placeholder="Confirm Employee Password...">
+									</div>
+								</div>
+								
+								
 								<div class="col-sm-3 col-sm-offset-1">
 									<div class="form-group">
 										<label>Email <small>(required)</small></label> <input
@@ -191,17 +206,7 @@
 
 
 
-								<div class="col-sm-3 col-sm-offset-1">
-									<div class="form-group">
-										<label>Password <small>(required)</small></label> <input
-											name="pass" type="text" class="form-control" required
-											placeholder="Employee Password...">
-									</div>
-								</div>
-
-
-
-								<div class="col-sm-3">
+								<div class="col-sm-3 ">
 									<div class="form-group">
 										<div  id="sandbox-container">
 											<label>Date of Birth</label>
@@ -217,7 +222,7 @@
 								</div>
 
 
-								<div class="col-sm-3 col-sm-offset-1">
+								<div class="col-sm-3 ">
 									<div class="form-group">
 										<label>Phone <small>(required)</small></label> <input
 											type="number" class="form-control" name="phone"
@@ -265,12 +270,13 @@
 										<label>Employee Job <small>(required)</small></label> <select
 											class="form-control" name="type" required>
 											<option value="">Job</option>
+											<option value="Admin">Admin</option>
 											<option value="Doctor">Doctor</option>
 											<option value="Nurse">Nurse</option>
 											<option value="Lab">Lab</option>
 											<option value="Xray">Xray</option>
-											<option value="Pharmatiest">Pharmatiest</option>
-											<option value="Receptioniest">Receptioniest</option>
+											<option value="pharmacist">pharmacist</option>
+											<option value="Receptionist">Receptionist</option>
 											<option value="Accountant">Accountant</option>
 										</select>
 									</div>
@@ -428,7 +434,7 @@
 						<div class="pull-right">
 							<input type='button'
 								class='btn btn-next btn-fill btn-warning btn-wd btn-sm'
-								name='next' value='Next' /> <input type='submit'
+								name='next' value='Next' onclick="validatePassword();"/> <input type='submit'
 								class='btn btn-finish btn-fill btn-warning btn-wd btn-sm'
 								name='finish' value='Add Employee' />
 
@@ -474,8 +480,8 @@
 								<tr>
 									<td><c:out value="${employee.firstName}" /> <c:out
 											value="${employee.fatherName}" /> <c:out
-											value="${employee.familyName}" /> <c:out
-											value="${employee.type}" /></td>
+											value="${employee.familyName}" /> </td>
+											
 									<td><c:out value="${employee.category.categoryName}" /></td>
 									<td><c:out value="${employee.type}" /></td>
 									<td><a href="empmgmt.jsp?uempid=${employee.employeeId}"><i

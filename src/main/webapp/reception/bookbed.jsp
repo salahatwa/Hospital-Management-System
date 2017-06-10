@@ -37,7 +37,7 @@
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-9 col-md-offset-1">
 				<div class="card">
 					<div class="card-header text-center" data-background-color="red">
 						<h4 class="title">
@@ -73,7 +73,7 @@
 													<th>Patient</th>
 													<th>Departement</th>
 													<th>Date of Booked</th>
-													<th>Room</th>
+                                                                                                        <th>Room Number</th>
 													<th>Room Type</th>
 													<th>Status</th>
 													<th></th>
@@ -89,7 +89,7 @@
 															<%=bookBed.getPatient().getFamilyName()%></td>
 														<td><%=bookBed.getDepartement()%></td>
 														<td><%=bookBed.getDatePlaced()%></td>
-														<td><%=bookBed.getRoom().getRoomId()%></td>
+														<td><%=bookBed.getRoom().getRoomNumber()%></td>
 														<td><%=bookBed.getRoom().getRoomType().getTypeOfroom()%></td>
 														<td><%=bookBed.isStatus()%></td>
 														<td class="td-actions text-right"><a
@@ -202,7 +202,8 @@
 																	%>
 																	<option value="<%=room.getRoomId()%>">
 																		<%=room.getRoomType().getTypeOfroom()%> /
-																		<%=room.getRoomType().getRoomCost()%>
+																		<%=room.getRoomType().getRoomCost()%> /
+                                                                                                                                                <%=room.getRoomNumber()%>
 																	</option>
 																	<%
 																		}

@@ -39,20 +39,30 @@
 	href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons'
 	rel='stylesheet' type='text/css'>
 
+<!-- Date Picker -->
+<link href="assets/css/date-picker.css" rel="stylesheet" />
+
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons'
+	rel='stylesheet' type='text/css'>
+
+	
+
 <script>
 	function addDrug() {
-		demo.showNotification('top', 'right', 'Success Added Drug',
-				'success');
+		demo.showNotification('top', 'right', 'Success Added Drug', 'success');
 	}
 
 	function updateDrug() {
-		demo.showNotification('top', 'right', 'Success Updated Drug',
-				'success');
+		demo
+				.showNotification('top', 'right', 'Success Updated Drug',
+						'success');
 	}
 
 	function deleteDrug() {
-		demo.showNotification('top', 'right', 'Success Deleted Drug',
-				'success');
+		demo
+				.showNotification('top', 'right', 'Success Deleted Drug',
+						'success');
 	}
 
 	function error() {
@@ -128,6 +138,10 @@
 	<script src="assets/js/jquery.dataTables.min.js"></script>
 
 	<script src="assets/js/dataTables.bootstrap.min.js"></script>
+	
+	<!-- Date Picker -->
+	<script src="assets/js/bootstrap-datepicker.js"></script>
+	
 
 </body>
 </html>

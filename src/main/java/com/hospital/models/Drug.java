@@ -22,11 +22,14 @@ public class Drug implements java.io.Serializable {
 	private Integer drugId;
 
 	private double cost;
-	private String drug_expired; // finishedDate;
+	
 	private String name;
 	private int quantity;
-	private String startDate;
-	private String unitPerDay;
+	
+	private Date drug_expired;
+	private Date startDate;
+	
+	
 
 	@OneToOne(fetch = FetchType.EAGER, targetEntity = Employee.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "employee_id")
@@ -53,11 +56,11 @@ public class Drug implements java.io.Serializable {
 		this.finishedDate = finishedDate;
 	}
 */
-        public String getDrug_expired() {
+        public Date getDrug_expired() {
 		return this.drug_expired;
 	}
 
-	public void setDrug_expired(String drug_expired) {
+	public void setDrug_expired(Date drug_expired) {
 		this.drug_expired = drug_expired;
 	}
         
@@ -79,21 +82,14 @@ public class Drug implements java.io.Serializable {
 		this.quantity = quantity;
 	}
 
-	public String getStartDate() {
+	public Date getStartDate() {
 		return this.startDate;
 	}
 
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
-	public String getUnitPerDay() {
-		return this.unitPerDay;
-	}
-
-	public void setUnitPerDay(String unitPerDay) {
-		this.unitPerDay = unitPerDay;
-	}
 
 	public Integer getDrugId() {
 		return drugId;

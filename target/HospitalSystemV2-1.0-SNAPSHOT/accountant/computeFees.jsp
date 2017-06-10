@@ -98,7 +98,7 @@
                                                         Date currentDate = new Date();
                                                         long totalNumberOfDayes = getDifferenceDays(bookBed.getDatePlaced(), currentDate);
                                                         double totalCost = totalNumberOfDayes * bookBed.getRoom().getRoomType().getRoomCost();
-                                                        out.print(totalNumberOfDayes + ":\t:" + bookBed.getRoom().getRoomType().getRoomCost());
+                                  //                      out.print(totalNumberOfDayes + ":\t:" + bookBed.getRoom().getRoomType().getRoomCost());
                                                     %>
 
                                                     <tr>

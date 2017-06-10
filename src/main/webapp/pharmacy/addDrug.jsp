@@ -93,30 +93,41 @@
 
 
 
-								<div class="col-sm-3">
+								
+
+								
+								<div class="col-sm-3 ">
 									<div class="form-group">
-										<label>Unit Per Day <small>(required)</small></label> <input
-											name="unitPerDay" type="text" class="form-control"
-											placeholder="3 times..">
+										<div  id="sandbox-container">
+											<label>production date <small>(required)</small></label>
+											<div class="input-daterange input-group" id="datepicker">
+
+												<input class="form-control" name="startDate" type="text"
+													placeholder="00/00/0000" required readonly>
+												<!-- 	<span class="input-group-addon"></span> -->
+											</div>
+
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="col-sm-3 ">
+									<div class="form-group">
+										<div  id="sandbox-container">
+											<label>Drug expired <small>(required)</small></label>
+											<div class="input-daterange input-group" id="datepicker">
+
+												<input class="form-control" name="drug_expired" type="text"
+													placeholder="00/00/0000" required readonly>
+												<!-- 	<span class="input-group-addon"></span> -->
+											</div>
+
+										</div>
 									</div>
 								</div>
 
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label>production date <small>(required)</small></label> <input
-											name="startDate" type="text" class="form-control"
-											placeholder="05/03/2017">
-									</div>
-								</div>
 
-
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label>Drug expired <small>(required)</small></label> <input
-											name="drug_expired" type="text" class="form-control"
-											placeholder="05/08/2017">
-									</div>
-								</div>
 
 
 							</div>
@@ -167,7 +178,6 @@
 							<th>Name</th>
 							<th>Cost</th>
 							<th>Quantity</th>
-							<th>Unit Per Day</th>
 							<th>production date</th>
 							<th>Drug Expired</th>
 							<th>Employee</th>
@@ -179,7 +189,6 @@
 									<td><c:out value="${drug.name}" /></td>
 									<td><c:out value="${drug.cost}" /></td>
 									<td><c:out value="${drug.quantity}" /></td>
-									<td><c:out value="${drug.unitPerDay}" /></td>
 									<td><c:out value="${drug.startDate}" /></td>
 									<td><c:out value="${drug.drug_expired}" /></td>
 									<td><c:out value="${drug.employee.firstName}" /> <c:out

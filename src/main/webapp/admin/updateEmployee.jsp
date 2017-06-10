@@ -200,13 +200,21 @@
 								</div>
 							</div>
 
-							<div class="col-sm-3 col-sm-offset-1">
-								<div class="form-group">
-									<label>Password <small>(required)</small></label> <input
-										name="pass" type="text" class="form-control" required
-										placeholder="Password...">
+							<div class="col-sm-3 ">
+									<div class="form-group">
+										<label>Password <small>(required)</small></label> <input
+										id="password"	name="pass" type="password" class="form-control" 
+											placeholder="Employee Password...">
+									</div>
 								</div>
-							</div>
+								
+								<div class="col-sm-3 ">
+									<div class="form-group">
+										<label>Confirm Password <small>(required)</small></label> <input
+										id="confirm_password"	 type="password" class="form-control" 
+											placeholder="Confirm Employee Password...">
+									</div>
+								</div>
 
 							<div class="col-sm-3">
 								<div class="form-group">
@@ -290,10 +298,10 @@
 											<c:if test="${ employeeType=='Lab' }"> selected </c:if>>Lab</option>
 										<option value="Xray"
 											<c:if test="${ employeeType=='Xray' }"> selected </c:if>>Xray</option>
-										<option value="Pharmacy"
-											<c:if test="${ employeeType=='Pharmatiest' }"> selected </c:if>>Pharmatiest</option>
-										<option value="Receptioniest"
-											<c:if test="${ employeeType=='Receptioniest' }"> selected </c:if>>Receptioniest</option>
+										<option value="pharmacist"
+											<c:if test="${ employeeType=='pharmacist' }"> selected </c:if>>pharmacist</option>
+										<option value="Receptionist"
+											<c:if test="${ employeeType=='Receptionist' }"> selected </c:if>>Receptionist</option>
 										<option value="Accountant"
 											<c:if test="${ employeeType=='Accountant' }"> selected </c:if>>Accountant</option>
 									</select>
@@ -488,9 +496,9 @@
 				<div class="pull-right">
 					<input type='button'
 						class='btn btn-next btn-fill btn-warning btn-wd btn-sm'
-						name='next' value='Next' /> <input type='submit'
+						name='next' value='Next' onclick="validatePassword();" /> <input type='submit'
 						class='btn btn-finish btn-fill btn-warning btn-wd btn-sm'
-						name='finish' value='Finish' />
+						name='finish' value='Finish' onclick="validatePassword();" />
 
 				</div>
 
@@ -534,8 +542,8 @@
 							<tr>
 								<td><c:out value="${employee.firstName}" /> <c:out
 										value="${employee.fatherName}" /> <c:out
-										value="${employee.familyName}" /> <c:out
-										value="${employee.type}" /></td>
+										value="${employee.familyName}" /> </td>
+										
 								<td><c:out value="${employee.category.categoryName}" /></td>
 								<td><c:out value="${employee.type}" /></td>
 								<td><a href="empmgmt.jsp?uempid=${employee.employeeId}"><i

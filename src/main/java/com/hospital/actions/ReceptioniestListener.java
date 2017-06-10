@@ -41,7 +41,7 @@ public class ReceptioniestListener {
 			String dob = request.getParameter("dob");
 			String phone = request.getParameter("phone");
 			String gender = request.getParameter("gender");
-			String age = request.getParameter("age");
+			
 
 			int bloodGroupID = Integer.parseInt(request.getParameter("bloodGroupID"));
 			BloodGroup bloodGroup = (BloodGroup) receptioniestDAO.getObject(bloodGroupID, BloodGroup.class);
@@ -67,7 +67,6 @@ public class ReceptioniestListener {
 			patient.setDob(FormateDate.getFormatedDate(dob));
 			patient.setPhone(Long.parseLong(phone));
 			patient.setGender(gender);
-			patient.setAge(Integer.parseInt(age));
 			patient.setJoiningDate(new Date());
 			patient.setNextOfKin(nextOfKin);
 			patient.setBloodGroup(bloodGroup);
@@ -126,7 +125,7 @@ public class ReceptioniestListener {
 			String dob = request.getParameter("dob");
 			String phone = request.getParameter("phone");
 			String gender = request.getParameter("gender");
-			String age = request.getParameter("age");
+			
 
 			int bloodGroupID = Integer.parseInt(request.getParameter("bloodGroupID"));
 			BloodGroup bloodGroup = (BloodGroup) receptioniestDAO.getObject(bloodGroupID, BloodGroup.class);
@@ -148,7 +147,6 @@ public class ReceptioniestListener {
 			patient.setDob(FormateDate.getFormatedDate(dob));
 			patient.setPhone(Long.parseLong(phone));
 			patient.setGender(gender);
-			patient.setAge(Integer.parseInt(age));
 			patient.setJoiningDate(new Date());
 			
 			

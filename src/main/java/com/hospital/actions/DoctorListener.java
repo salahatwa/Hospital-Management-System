@@ -40,11 +40,13 @@ public class DoctorListener {
 
 			int patientID = Integer.parseInt( request.getParameter("patientID") );
 			String disease = request.getParameter("disease");
+			String note = request.getParameter("note");
 			
 			Disease disease2=new Disease();
 			disease2.setDisease(disease);
 			disease2.setDiseaseDate(new Date());
 			disease2.setEmployee(employee);
+			disease2.setNote(note);
 			
 			Patient patient = (Patient) doctorDAO.getObject(patientID, Patient.class);
 			disease2.setPatient(patient);
@@ -87,13 +89,14 @@ public class DoctorListener {
 
 			int patientID = Integer.parseInt( request.getParameter("patientID") );
 			String disease = request.getParameter("disease");
+			String note = request.getParameter("note");
 			
 			Disease disease2=new Disease();
 			disease2.setDiseaseId(diseaseID);
 			disease2.setDisease(disease);
 			disease2.setDiseaseDate(new Date());
 			disease2.setEmployee(employee);
-			
+			disease2.setNote(note);
 			Patient patient = (Patient) doctorDAO.getObject(patientID, Patient.class);
 			disease2.setPatient(patient);
 			

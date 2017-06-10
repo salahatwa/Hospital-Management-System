@@ -20,6 +20,8 @@ public class Room implements java.io.Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "roomId")
 	private Integer roomId;
+        
+        private int roomNumber;
 
 	private int numberOfBeds;
 	
@@ -67,5 +69,19 @@ public class Room implements java.io.Serializable {
 	public void setNumberOfAvailableBeds(int numberOfAvailableBeds) {
 		this.numberOfAvailableBeds = numberOfAvailableBeds;
 	}
+
+    /**
+     * @return the roomNumber
+     */
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    /**
+     * @param roomNumber the roomNumber to set
+     */
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
+    }
 
 }

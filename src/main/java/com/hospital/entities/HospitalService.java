@@ -266,6 +266,24 @@ public class HospitalService extends HibernateDriver
         }
         return messages;
     }
+    
+    @Override
+    public List<Message> getAllUnreadMessagesForEmployee(Integer employeeID) {
+        List<Message> messages = null;
+        try {
+            openSession();
+            messages = getSession()
+                    .createSQLQuery("Select * From Messages where fto_employee_id= :toEmp and messageStatus=0 ORDER BY messageDate Desc")
+                    .addEntity(Message.class).setParameter("toEmp", employeeID).list();
+
+        } catch (Exception ex) {
+            roleBack();
+            ex.printStackTrace();
+        } finally {
+            closeSession();
+        }
+        return messages;
+    }
 
     @Override
     public void deleteAllPatientMessages(int patientID) {
@@ -366,7 +384,7 @@ public class HospitalService extends HibernateDriver
     public void sellDrug(SelledDrug selledDrug) {
         try {
             openSession();
-            String sql = "insert into SelledDrugs ( SELLEDDRUGID ,Drug_ID, patient_ID, pharmatiest_ID, quantity, selledDate) values(:1,:2,:3,:4,:5,:6)";
+            String sql = "insert into SelledDrugs ( SELLEDDRUGID ,Drug_ID, patient_ID, pharmatiest_ID, quantity, selledDate,unitPerDay,startDate,endDate) values(:1,:2,:3,:4,:5,:6,:7,:8,:9)";
             SQLQuery query = getSession().createSQLQuery(sql);
             query.setParameter("1", selledDrug.getSelledDrugID() + 1);
             query.setParameter("2", selledDrug.getDrug().getDrugId());
@@ -374,6 +392,9 @@ public class HospitalService extends HibernateDriver
             query.setParameter("4", selledDrug.getPharmatiest().getEmployeeId());
             query.setParameter("5", selledDrug.getQuantity());
             query.setParameter("6", selledDrug.getSelledDate());
+            query.setParameter("7", selledDrug.getUnitPerDay());
+            query.setParameter("8", selledDrug.getStartDate());
+            query.setParameter("9", selledDrug.getEndDate());
 
             query.executeUpdate();
 

@@ -1,3 +1,4 @@
+<%@page import="com.hospital.utils.FormateDate"%>
 <%@page import="com.hospital.models.Drug"%>
 <%@page import="com.hospital.entities.PharmatiestDAO"%>
 <%@page import="com.hospital.models.Employee"%>
@@ -67,13 +68,15 @@
 							<div class="row">
 								<h4 class="info-text">Basic Drug Information</h4>
 
-                               <input type="hidden" name="drugID" value="<%=selectedDrug.getDrugId() %>" />
+								<input type="hidden" name="drugID"
+									value="<%=selectedDrug.getDrugId()%>" />
 
 								<div class="col-sm-3">
 									<div class="form-group">
 										<label>Drug Name <small>(required)</small></label> <input
 											name="name" type="text" class="form-control"
-											placeholder="Kotofan drug.." required value="<%=selectedDrug.getName() %>" >
+											placeholder="Kotofan drug.." required
+											value="<%=selectedDrug.getName()%>">
 									</div>
 								</div>
 
@@ -81,7 +84,8 @@
 									<div class="form-group">
 										<label>Cost <small>(required)</small></label> <input
 											type="number" class="form-control" name="cost"
-											placeholder="10.00" required value="<%=selectedDrug.getCost() %>"/>
+											placeholder="10.00" required
+											value="<%=selectedDrug.getCost()%>" />
 									</div>
 								</div>
 
@@ -89,36 +93,45 @@
 								<div class="col-sm-3 col-sm-offset-1">
 									<div class="form-group">
 										<label>Quantity <small>(required)</small></label> <input
-											type="number" class="form-control" name="quantity" value="<%=selectedDrug.getQuantity() %>"
-											placeholder="50" required />
+											type="number" class="form-control" name="quantity"
+											value="<%=selectedDrug.getQuantity()%>" placeholder="50"
+											required />
 									</div>
 								</div>
 
 
 
 
-								<div class="col-sm-3">
+
+
+								<div class="col-sm-3 ">
 									<div class="form-group">
-										<label>Unit Per Day <small>(required)</small></label> <input
-											name="unitPerDay" type="text" class="form-control" value="<%=selectedDrug.getUnitPerDay() %>"
-											placeholder="3 times..">
+										<div id="sandbox-container">
+											<label>production date<small>(required)</small></label>
+											<div class="input-daterange input-group" id="datepicker">
+
+												<input class="form-control" name="startDate" type="text" 	value="<%=FormateDate.getStringDate(selectedDrug.getStartDate())%>"
+													placeholder="00/00/0000" required readonly>
+												<!-- 	<span class="input-group-addon"></span> -->
+											</div>
+
+										</div>
 									</div>
 								</div>
 
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label>production date <small>(required)</small></label> <input
-											name="startDate" type="text" class="form-control" value="<%=selectedDrug.getStartDate() %>"
-											placeholder="05/03/2017">
-									</div>
-								</div>
 
-
-								<div class="col-sm-3">
+								<div class="col-sm-3 ">
 									<div class="form-group">
-										<label>Finished Date <small>(required)</small></label> <input
-											name="drug_expired" type="text" class="form-control" value="<%=selectedDrug.getDrug_expired() %>"
-											placeholder="05/08/2017">
+										<div id="sandbox-container">
+											<label>Drug expired<small>(required)</small></label>
+											<div class="input-daterange input-group" id="datepicker">
+
+												<input class="form-control" name="drug_expired" type="text" value="<%=FormateDate.getStringDate(selectedDrug.getDrug_expired())%>"
+													placeholder="00/00/0000" required readonly>
+												<!-- 	<span class="input-group-addon"></span> -->
+											</div>
+
+										</div>
 									</div>
 								</div>
 
@@ -171,9 +184,8 @@
 							<th>Name</th>
 							<th>Cost</th>
 							<th>Quantity</th>
-							<th>Unit Per Day</th>
 							<th>production date</th>
-							<th>drug expired</th>
+							<th>Drug Expired</th>
 							<th>Employee</th>
 							<th></th>
 						</thead>
@@ -183,12 +195,12 @@
 									<td><c:out value="${drug.name}" /></td>
 									<td><c:out value="${drug.cost}" /></td>
 									<td><c:out value="${drug.quantity}" /></td>
-									<td><c:out value="${drug.unitPerDay}" /></td>
 									<td><c:out value="${drug.startDate}" /></td>
 									<td><c:out value="${drug.drug_expired}" /></td>
 									<td><c:out value="${drug.employee.firstName}" /> <c:out
 											value="${drug.employee.fatherName}" /> <c:out
 											value="${drug.employee.familyName}" /></td>
+                                                                        
 									<td><a href="drugmgmt.jsp?uempid=${drug.drugId}"><i
 											class="material-icons">edit</i></a> <a
 										href="Process?action=DeleteDrug&dempid=${drug.drugId}"><i

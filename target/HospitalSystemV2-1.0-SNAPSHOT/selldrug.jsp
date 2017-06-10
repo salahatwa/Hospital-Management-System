@@ -52,7 +52,15 @@
 		demo.showNotification('top', 'right', 'Success Deleted Selled Drug',
 				'success');
 	}
+	
+	function invalidQuantity() {
+		demo.showNotification('top', 'right', 'You Enter Quantity more than Drug Quantity','danger');
+	}
+	function less50() {
+		demo.showNotification('top', 'right', 'Selled Success , Warning Drug Quantity Less Than 50','warn');
+	}
 
+	
 	function error() {
 		demo.showNotification('top', 'right', 'Error Operations', 'danger');
 	}
@@ -62,6 +70,11 @@
 	<c:if test="${not empty param['add']}">  onload="addSellDrug();" </c:if>
 	<c:if test="${not empty param['delete']}">  onload="deleteSellDrug();" </c:if>
 	<c:if test="${not empty param['update']}">  onload="updateSellDrug();" </c:if>
+	
+	<c:if test="${not empty param['more']}">  onload="invalidQuantity();" </c:if>
+	
+	<c:if test="${not empty param['less50']}">  onload="less50();" </c:if>
+	
 	<c:if test="${not empty param['error']}">  onload="error();" </c:if>>
 
 	<div class="wrapper">

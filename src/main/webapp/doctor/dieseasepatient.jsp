@@ -30,16 +30,15 @@
 	DoctorDAO doctorDAO = HospitalService.getInstance();
 
 	Employee currentEmp = (Employee) session.getAttribute("employee");
-	
+
 	List<Patient> patients = doctorDAO.getListObjects(Patient.class);
 
 	List<Disease> diseases = doctorDAO.getAllDiseaseByEmployeeID(currentEmp.getEmployeeId());
-
 %>
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-9 col-md-offset-1">
 				<div class="card">
 					<div class="card-header text-center" data-background-color="red">
 						<h4 class="title">
@@ -74,6 +73,7 @@
 												<thead>
 													<th>Patient</th>
 													<th>Disease</th>
+													<th>Patient Note</th>
 													<th>When You write Disease</th>
 													<th></th>
 												</thead>
@@ -87,8 +87,9 @@
 														<td><%=disease.getPatient().getName()%> <%=disease.getPatient().getFatherName()%>
 															<%=disease.getPatient().getFamilyName()%></td>
 														<td><%=disease.getDisease()%></td>
+														<td><%=disease.getNote()%></td>
 														<td><%=disease.getDiseaseDate()%></td>
-														
+
 														<td class="td-actions text-right"><a
 															href="dieseasePatient.jsp?udis=<%=disease.getDiseaseId()%>"
 															rel="tooltip" title="Edit disease"
@@ -115,12 +116,13 @@
 												<c:when test="${ not empty param['udis'] }">
 													<%
 														int diseaseID = Integer.parseInt(request.getParameter("udis"));
-														Disease selectedDisease = (Disease) doctorDAO.getObject(diseaseID, Disease.class);
+																Disease selectedDisease = (Disease) doctorDAO.getObject(diseaseID, Disease.class);
 													%>
 
 													<form action="Process?action=UpdateDiesease" method="POST">
-														<input type="hidden" name="diseaseID" value="<%=diseaseID%>" />
-														
+														<input type="hidden" name="diseaseID"
+															value="<%=diseaseID%>" />
+
 
 														<div class="col-sm-3">
 															<div class="form-group">
@@ -150,6 +152,16 @@
 																	required name="disease" type="text"
 																	class="form-control" placeholder="Disease"
 																	value="<%=selectedDisease.getDisease()%>">
+															</div>
+														</div>
+
+
+														<div class="col-sm-3">
+															<div class="form-group">
+																<label>Note <small>(required)</small></label> <input
+																	required name="note" type="text" class="form-control"
+																	placeholder="Patient Note"
+																	value="<%=selectedDisease.getNote()%>">
 															</div>
 														</div>
 
@@ -191,11 +203,19 @@
 														</div>
 
 
-													<div class="col-sm-3">
+														<div class="col-sm-3">
 															<div class="form-group">
 																<label>Disease <small>(required)</small></label> <input
 																	required name="disease" type="text"
 																	class="form-control" placeholder="Disease">
+															</div>
+														</div>
+
+														<div class="col-sm-3">
+															<div class="form-group">
+																<label>Note <small>(required)</small></label> <input
+																	 name="note" type="text" class="form-control"
+																	placeholder="Patient Note">
 															</div>
 														</div>
 
@@ -204,7 +224,7 @@
 															<div class="form-group">
 																<input type="submit"
 																	class="btn btn-round btn-fill btn-info"
-																	value="Write Patient Disease" />
+																	value="Disease" />
 															</div>
 														</div>
 

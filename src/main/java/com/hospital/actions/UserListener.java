@@ -74,7 +74,7 @@ public class UserListener {
 			message.setFromEmployee(fromEmployee);
 			message.setSubject(messageSubject);
 
-			if (sendToID .equals(Entity.Receptioniest.name())) {
+			if (sendToID.equals(Entity.Receptioniest.name())) {
 				System.out.println("##########ALL###########");
 				List<Employee> employees = hospitalService.getEmployees(Entity.Receptioniest.name());
 				for (Employee employee : employees) {
@@ -92,7 +92,7 @@ public class UserListener {
 
 				hospitalService.composeMessage(message);
 			}
-			
+
 			response.sendRedirect("compose.jsp?success=true");
 
 		} catch (Exception ex) {
@@ -103,6 +103,28 @@ public class UserListener {
 			}
 			ex.printStackTrace();
 		}
+	}
+
+	public void viewMessage(HttpServletRequest request, HttpServletResponse response) {
+
+		try {
+			httpSession = request.getSession();
+			
+			int selectedMessageID = Integer.parseInt(request.getParameter("messageID"));
+			System.out.println("@@" + selectedMessageID);
+			Message selectedMessage = (Message) hospitalService.getObject(selectedMessageID, Message.class);
+
+			if (!selectedMessage.isMessageStatus()) {
+				selectedMessage.setMessageStatus(true);
+				hospitalService.updateObject(selectedMessage);
+			}
+			httpSession.setAttribute("selectedMessage", selectedMessage);
+			response.sendRedirect("viewmessage.jsp");
+		
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+
 	}
 
 }

@@ -23,30 +23,30 @@ public class Message implements java.io.Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "messageId")
 	private Integer messageId;
-	
-	
+
 	private String messageBody;
+
 	private String subject;
+
 	private boolean messageStatus;
-        @Temporal(javax.persistence.TemporalType.DATE)
+
+	@Temporal(javax.persistence.TemporalType.DATE)
 	private Date messageDate;
-	
-	@OneToOne(fetch = FetchType.EAGER,targetEntity = Employee.class,cascade = {CascadeType.ALL,CascadeType.REMOVE})
-    @JoinColumn(name = "from_employee_id")
+
+	@OneToOne(fetch = FetchType.EAGER, targetEntity = Employee.class, cascade = { CascadeType.ALL, CascadeType.REMOVE })
+	@JoinColumn(name = "from_employee_id")
 	private Employee fromEmployee;
-	
-	@OneToOne(fetch = FetchType.EAGER,targetEntity = Employee.class,cascade ={CascadeType.ALL,CascadeType.REMOVE})
-    @JoinColumn(name = "fto_employee_id")
+
+	@OneToOne(fetch = FetchType.EAGER, targetEntity = Employee.class, cascade = { CascadeType.ALL, CascadeType.REMOVE })
+	@JoinColumn(name = "fto_employee_id")
 	private Employee toEmployee;
-	
-	
-	@OneToOne(fetch = FetchType.EAGER,targetEntity = Patient.class,cascade = {CascadeType.ALL,CascadeType.REMOVE})
-    @JoinColumn(name = "patient_id")
+
+	@OneToOne(fetch = FetchType.EAGER, targetEntity = Patient.class, cascade = { CascadeType.ALL, CascadeType.REMOVE })
+	@JoinColumn(name = "patient_id")
 	private Patient patient;
 
 	public Message() {
 	}
-
 
 	public Integer getMessageId() {
 		return this.messageId;
@@ -55,7 +55,6 @@ public class Message implements java.io.Serializable {
 	public void setMessageId(Integer messageId) {
 		this.messageId = messageId;
 	}
-
 
 	public Patient getPatient() {
 		return this.patient;
@@ -97,21 +96,17 @@ public class Message implements java.io.Serializable {
 		this.messageDate = messageDate;
 	}
 
-
 	public Employee getFromEmployee() {
 		return fromEmployee;
 	}
-
 
 	public void setFromEmployee(Employee fromEmployee) {
 		this.fromEmployee = fromEmployee;
 	}
 
-
 	public Employee getToEmployee() {
 		return toEmployee;
 	}
-
 
 	public void setToEmployee(Employee toEmployee) {
 		this.toEmployee = toEmployee;

@@ -26,9 +26,9 @@
     </div>
 </a>
 <%
-    UserDAO userDAO = HospitalService.getInstance();
-    Employee em = (Employee) session.getAttribute("employee");
-    List<Message> messages = userDAO.getAllMessagesSentByEmployee(em.getEmployeeId());
+    UserDAO userDAO4 = HospitalService.getInstance();
+    Employee em33 = (Employee) session.getAttribute("employee");
+    List<Message> allMessages = userDAO4.getAllMessagesSentByEmployee(em33.getEmployeeId());
 %>
 <div class="content">
     <div class="container-fluid">
@@ -39,7 +39,7 @@
                         <h4 class="title">
                             All Sent Mails
                             </h3>
-                            <p class="category">Sent Emails To different Employee's</p>
+                            <p class="category">Read All Sent Emails To different Employee's</p>
                     </div>
                     <div class="card-content">
 
@@ -51,7 +51,7 @@
                             </thead>
                             <tbody>
                                 <%
-                                    for (Message message : messages) {
+                                    for (Message message : allMessages) {
                                 %>
 
                                 <tr><td>

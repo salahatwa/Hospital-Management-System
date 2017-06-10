@@ -27,15 +27,15 @@
 	</div>
 </a>
 <%
-	UserDAO userDAO = HospitalService.getInstance();
+	UserDAO userDAO6 = HospitalService.getInstance();
 
 
-	List<Disease> diseases = userDAO.getListObjects(Disease.class);
+	List<Disease> diseases = userDAO6.getListObjects(Disease.class);
 %>
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-1">
 				<div class="card">
 					<div class="card-header text-center" data-background-color="red">
 						<h4 class="title">
@@ -72,6 +72,7 @@
 													<th>Patient Blood_Group</th>
 													<th>Disease</th>
 													<th>Time Doctor Write Disease</th>
+													<th>Doctor Notes</th>
 													
 													<th>Doctor</th>
 												</thead>
@@ -89,6 +90,7 @@
 														<td><%=disease.getDisease()%></td>
 														
 														<td><%=disease.getDiseaseDate()%></td>
+														<td><%=disease.getNote()%></td>
 														
 														<td><%=disease.getEmployee().getFirstName()%> <%=disease.getEmployee().getFatherName()%> <%=disease.getEmployee().getFamilyName()%></td>
 
