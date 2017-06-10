@@ -28,7 +28,6 @@ A step by step series of examples that tell you have to get a development env ru
 
 Say what the step will be
 
-```
 ![viewallsentmails](https://user-images.githubusercontent.com/11550708/27002543-acb02832-4d99-11e7-9772-3dbf3d094872.PNG)
 ![bookbed](https://user-images.githubusercontent.com/11550708/27002544-acb60e64-4d99-11e7-8e3f-ffdd88afd3de.PNG)
 ![changepassword](https://user-images.githubusercontent.com/11550708/27002551-ad11112e-4d99-11e7-9f34-33a6c061ad3e.PNG)
@@ -44,8 +43,6 @@ Say what the step will be
 ![selldrug](https://user-images.githubusercontent.com/11550708/27002554-ad317e1e-4d99-11e7-8776-d4f55758286e.PNG)
 ![statisticpage](https://user-images.githubusercontent.com/11550708/27002556-ad53f408-4d99-11e7-8a32-8e6adc9398ca.PNG)
 
-
-```
 
 ```
 until finished
