@@ -9,7 +9,7 @@ Free Java project for Management Hospital Using J2EE and Hibernate With Prefect 
 4. Jasper Reports
 5. Oracle Database
 
-### Prerequisites
+### Prerequisites And Installation
 
 After cloning this repository in your local machine , import using Eclipse IDE , or netbeans  if you used eclipse after importing project press rigth click and select #run as --> maven install after cleaning and building your project you can run on any server 
 Tomcat or Jboss 
@@ -18,15 +18,9 @@ Tomcat or Jboss
 - configure your server properties 
 
 
-```
-Give examples
-```
+### 
+![mobileview](https://user-images.githubusercontent.com/11550708/27002546-acd4f248-4d99-11e7-82db-31497766942f.PNG)
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
 
 ![viewallsentmails](https://user-images.githubusercontent.com/11550708/27002543-acb02832-4d99-11e7-9772-3dbf3d094872.PNG)
 ![bookbed](https://user-images.githubusercontent.com/11550708/27002544-acb60e64-4d99-11e7-8e3f-ffdd88afd3de.PNG)
@@ -35,7 +29,7 @@ Say what the step will be
 ![druginvoice](https://user-images.githubusercontent.com/11550708/27002557-ad891e8a-4d99-11e7-8651-324a25fe8fd3.PNG)
 ![employeereport](https://user-images.githubusercontent.com/11550708/27002549-ad0e75a4-4d99-11e7-9226-8e1372e9a679.PNG)
 ![home](https://user-images.githubusercontent.com/11550708/27002545-accfd84e-4d99-11e7-9252-3ca14829f4b4.PNG)
-![mobileview](https://user-images.githubusercontent.com/11550708/27002546-acd4f248-4d99-11e7-82db-31497766942f.PNG)
+
 ![mobileview2](https://user-images.githubusercontent.com/11550708/27002547-aced4104-4d99-11e7-86b2-cad04e5c0d47.PNG)
 ![patient](https://user-images.githubusercontent.com/11550708/27002548-acf6d480-4d99-11e7-812d-1d82413682c8.PNG)
 ![pharmacy](https://user-images.githubusercontent.com/11550708/27002550-ad0ec4c8-4d99-11e7-95ac-fa8e9008a335.PNG)
