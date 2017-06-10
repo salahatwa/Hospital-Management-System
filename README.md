@@ -19,6 +19,8 @@ Tomcat or Jboss
 - Run On server 
 - configure your server properties 
 
+> Make sure you install **Java** JDK or JRE
+
 ### Home Page , Web View
 ![home](https://user-images.githubusercontent.com/11550708/27002545-accfd84e-4d99-11e7-9252-3ca14829f4b4.PNG)
 
