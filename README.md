@@ -18,8 +18,10 @@ Tomcat or Jboss
 - configure your server properties 
 
 
-### 
-![mobileview](https://user-images.githubusercontent.com/11550708/27002546-acd4f248-4d99-11e7-82db-31497766942f.PNG)
+### Mobile View
+![mobileview2](https://user-images.githubusercontent.com/11550708/27002547-aced4104-4d99-11e7-86b2-cad04e5c0d47.PNG)
+
+### Mobile View
 
 
 ![viewallsentmails](https://user-images.githubusercontent.com/11550708/27002543-acb02832-4d99-11e7-9772-3dbf3d094872.PNG)
@@ -30,7 +32,6 @@ Tomcat or Jboss
 ![employeereport](https://user-images.githubusercontent.com/11550708/27002549-ad0e75a4-4d99-11e7-9226-8e1372e9a679.PNG)
 ![home](https://user-images.githubusercontent.com/11550708/27002545-accfd84e-4d99-11e7-9252-3ca14829f4b4.PNG)
 
-![mobileview2](https://user-images.githubusercontent.com/11550708/27002547-aced4104-4d99-11e7-86b2-cad04e5c0d47.PNG)
 ![patient](https://user-images.githubusercontent.com/11550708/27002548-acf6d480-4d99-11e7-812d-1d82413682c8.PNG)
 ![pharmacy](https://user-images.githubusercontent.com/11550708/27002550-ad0ec4c8-4d99-11e7-95ac-fa8e9008a335.PNG)
 ![profileview](https://user-images.githubusercontent.com/11550708/27002553-ad3017d6-4d99-11e7-8e4e-a00179f71850.PNG)
