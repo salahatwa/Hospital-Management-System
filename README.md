@@ -2,7 +2,7 @@
 
 Free Java project for Management Hospital Using J2EE and Hibernate With Prefect Design Pattern Methodology
 
-# ng-image-gallery ![bower](https://img.shields.io/bower/v/ng-image-gallery.svg?style=flat-square) [![npm downloads](https://img.shields.io/npm/dt/ng-image-gallery.svg?style=flat-square)](https://www.npmjs.com/package/ng-image-gallery) [![preview](https://img.shields.io/badge/preview-click_here-green.svg?style=flat-square)](https://rawgit.com/thatisuday/ng-image-gallery/master/demo/main.html)
+# Sozer J2EE ![bower](https://img.shields.io/bower/v/ng-image-gallery.svg?style=flat-square) [![npm downloads](https://img.shields.io/npm/dt/ng-image-gallery.svg?style=flat-square)](https://www.npmjs.com/package/ng-image-gallery) [![preview](https://img.shields.io/badge/preview-click_here-green.svg?style=flat-square)](https://rawgit.com/thatisuday/ng-image-gallery/master/demo/main.html)
 
 # Used Technologies
 1. Java Web Application building using ( JSP - Servlet )
@@ -26,7 +26,7 @@ Tomcat or Jboss
 ![mobileview2](https://user-images.githubusercontent.com/11550708/27002547-aced4104-4d99-11e7-86b2-cad04e5c0d47.PNG)
 
 ### Mail View
-![viewallsentmails](https://user-images.githubusercontent.com/11550708/27002543-acb02832-4d99-11e7-9772-3dbf3d094872.PNG)
+![viewallsentmails](https://user-images.githubusercontent.com/11550708/27002543-acb02832-4d99-11e7-9772-3dbf3d094872.PNG)![compose](https://user-images.githubusercontent.com/11550708/27002555-ad34d654-4d99-11e7-81d8-11f8f1b335bf.PNG)
 
 ### Statistic Page
 ![statisticpage](https://user-images.githubusercontent.com/11550708/27002556-ad53f408-4d99-11e7-8a32-8e6adc9398ca.PNG)
@@ -47,7 +47,7 @@ Tomcat or Jboss
 ![bookbed](https://user-images.githubusercontent.com/11550708/27002544-acb60e64-4d99-11e7-8e3f-ffdd88afd3de.PNG)
 
 ![changepassword](https://user-images.githubusercontent.com/11550708/27002551-ad11112e-4d99-11e7-9f34-33a6c061ad3e.PNG)
-![compose](https://user-images.githubusercontent.com/11550708/27002555-ad34d654-4d99-11e7-81d8-11f8f1b335bf.PNG)
+
 ![patient](https://user-images.githubusercontent.com/11550708/27002548-acf6d480-4d99-11e7-812d-1d82413682c8.PNG)
 ![selldrug](https://user-images.githubusercontent.com/11550708/27002554-ad317e1e-4d99-11e7-8776-d4f55758286e.PNG)
 
