@@ -2,8 +2,6 @@
 
 Free Java project for Management Hospital Using J2EE and Hibernate With Prefect Design Pattern Methodology
 
-# Sozer J2EE ![Bower](https://img.shields.io/bower/v/ng-image-gallery.svg?style=flat-square) [![Downloads](https://img.shields.io/npm/dt/ng-image-gallery.svg?style=flat-square)]() [![Maven](https://img.shields.io/badge/preview-click_here-green.svg?style=flat-square)]()
-
 # Used Technologies
 1. Java Web Application building using ( JSP - Servlet )
 2. Hibernate 
