@@ -18,12 +18,23 @@ import com.hospital.actions.ReceptioniestListener;
 import com.hospital.actions.ReportListener;
 import com.hospital.actions.UserListener;
 import com.hospital.utils.ActionType;
+import com.hospital.models.Employee;
+import javax.servlet.http.HttpSession;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 @WebServlet("/Process")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, maxFileSize = 1024 * 1024 * 10, maxRequestSize = 1024 * 1024 * 50) // 50MB
 public class Process extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+
+	private static final Set<String> ADMIN_ACTIONS = new HashSet<>(Arrays.asList(
+			ActionType.AddEmployee.name(), ActionType.UpdateEmployee.name(), ActionType.deleteEmployee.name(),
+			ActionType.AddRoom.name(), ActionType.DeleteRoom.name(), ActionType.UpdateRoom.name(),
+			ActionType.AddServiceTime.name(), ActionType.UpdateServiceTime.name(), ActionType.DeleteServiceTime.name(),
+			ActionType.DownloadEmployeeReport.name()));
 
 	private AdminListener adminListener = AdminListener.getInstance();
 	private UserListener userListener = UserListener.getInstance();
@@ -42,7 +53,16 @@ public class Process extends HttpServlet {
 
 		String action = request.getParameter("action");
 
-		System.out.println("IN servlet");
+		HttpSession session = request.getSession(false);
+		Employee employee = session == null ? null : (Employee) session.getAttribute("employee");
+		if (employee == null) {
+			response.sendRedirect("index.jsp?error=true");
+			return;
+		}
+		if (ADMIN_ACTIONS.contains(action) && !"Admin".equals(employee.getType())) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return;
+		}
 
 		if (action.equals(ActionType.AddEmployee.name())) {
 			adminListener.addEmployee(request, response);
